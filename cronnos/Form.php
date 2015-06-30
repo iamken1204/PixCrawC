@@ -1,11 +1,11 @@
 <?php
-namespace models;
+namespace cronnos;
 
 use helpers\VarDumper;
 use helpers\ExceptionHandler as EH;
 use helpers\RegValidator;
 use helpers\IpProcessor;
-use models\App;
+use cronnos\App;
 
 class Form
 {

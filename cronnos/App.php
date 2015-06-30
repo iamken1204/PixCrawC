@@ -1,7 +1,7 @@
 <?php
-namespace models;
+namespace cronnos;
 
-use models\SiteView;
+use cronnos\SiteView;
 
 class App
 {

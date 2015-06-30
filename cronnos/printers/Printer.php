@@ -1,7 +1,7 @@
 <?php
-namespace models\printers;
+namespace cronnos\printers;
 
-use models\App;
+use cronnos\App;
 
 class Printer
 {
