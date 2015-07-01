@@ -1,5 +1,5 @@
 <?php
-use models\printers\Printer;
+use cronnos\printers\Printer;
 
 if (!empty($_SESSION['params']))
     $params = $_SESSION['params'];
@@ -20,7 +20,7 @@ if (!empty($_SESSION['params']))
 
 <?php
 $p = new Printer();
-$p->view('/js/js_fb_sdk.php', []);
+$p->view('/js/js_fb_sdk.php', [], false);
 ?>
 
 </html>
