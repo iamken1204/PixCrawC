@@ -31,6 +31,9 @@ class Printer
      *                               * true(bool) - will render default layout
      *                               * path(string) - will render specific layout
      *                               * false(bool) - will not render layout
+     * --NOTE-- If you DO NOT want to use layout this time,
+     *          (e.g. you are rendering partial, js, css, etc...)
+     *          you MUST set $layout as false.
      */
     public function view($fileName = '', $params = [], $layout = true)
     {
