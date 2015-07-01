@@ -1,11 +1,8 @@
 <?php
 include "autoload_app.php";
 
-// use models\App;
-use helpers\VarDumper;
-use models\Form;
-use models\printers\Printer;
-use models\SiteView;
+use cronnos\printers\Printer;
+// use cronnos\SiteView;
 
 // $form = new Form();
 // // $res = $form->testCRUD();
@@ -13,9 +10,11 @@ use models\SiteView;
 // $p = new Printer();
 // $p->view('partial/header.php');
 
-echo 'SV is coming!<BR>';
-// SiteView::addViews(10000);
-$s = new SiteView();
-$s->validateViews();
-var_dump(SiteView::getViews());
+// echo 'SV is coming!<BR>';
+// $s = new SiteView();
+// $s->validateViews();
+// var_dump(SiteView::getViews());
+?>
+
+<h1>Welcome to Cronnos!</h1>
 
