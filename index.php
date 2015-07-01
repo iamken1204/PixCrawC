@@ -14,7 +14,6 @@ use cronnos\printers\Printer;
 // $s = new SiteView();
 // $s->validateViews();
 // var_dump(SiteView::getViews());
+$p = new Printer;
+$p->view('view_index.php');
 ?>
-
-<h1>Welcome to Cronnos!</h1>
-

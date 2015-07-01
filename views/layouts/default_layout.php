@@ -18,4 +18,5 @@ $content = $_SESSION['view_content'];
     <?php require($content) ?>
 </body>
 
+    <?php $p->view('_partial/footer.php', [], false) ?>
 </html>
