@@ -11,12 +11,12 @@ $content = $_SESSION['view_content'];
 
 <head>
     <title><?= $title ?></title>
-    <?php $p->view('_partial/header.php', [], false) ?>
+    <?php $p->view('_partial/view_header.php', [], false) ?>
 </head>
 
 <body>
     <?php require($content) ?>
 </body>
 
-    <?php $p->view('_partial/footer.php', [], false) ?>
+    <?php $p->view('_partial/view_footer.php', [], false) ?>
 </html>
