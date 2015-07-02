@@ -11,7 +11,7 @@ $content = $_SESSION['view_content'];
 
 <head>
     <title><?= $title ?></title>
-    <?php $p->view('_partial/view_header.php', [], false) ?>
+    <?php $p->view('_partial/view_head.php', [], false) ?>
 </head>
 
 <body>
