@@ -1,6 +1,8 @@
 <?php
 namespace helpers;
 
+use helpers\Arr;
+
 class IpProcessor
 {
     /**
@@ -18,9 +20,9 @@ class IpProcessor
     {
         try {
             $detail = [
-                'HTTP_CLIENT_IP' => $_SERVER['HTTP_CLIENT_IP'],
-                'HTTP_X_FORWARDED_FOR' => $_SERVER['HTTP_X_FORWARDED_FOR'],
-                'REMOTE_ADDR' => $_SERVER['REMOTE_ADDR']
+                'HTTP_CLIENT_IP' => Arr::get($_SERVER, 'HTTP_CLIENT_IP', ''),
+                'HTTP_X_FORWARDED_FOR' => Arr::get($_SERVER, 'HTTP_X_FORWARDED_FOR', ''),
+                'REMOTE_ADDR' => Arr::get($_SERVER, 'REMOTE_ADDR', '')
             ];
             if (!empty($detail['HTTP_CLIENT_IP']))
                 $ip = $detail['HTTP_CLIENT_IP'];

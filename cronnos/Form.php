@@ -1,11 +1,11 @@
 <?php
-namespace cronnos;
+namespace models;
 
 use helpers\VarDumper;
 use helpers\ExceptionHandler as EH;
 use helpers\RegValidator;
 use helpers\IpProcessor;
-use cronnos\App;
+use models\App;
 
 class Form
 {
@@ -38,7 +38,7 @@ class Form
                 'name' => $data['name'],
                 'phone' => $data['phone'],
                 'email' => $data['email'],
-                'edm' => $data['emd'],
+                'edm' => empty($data['edm']) ? '0' : '1',
                 'ip' => $ipDetail['ip'],
                 'ip_detail' => $ipDetail['detail'],
                 'created_at' => $now,
@@ -71,14 +71,14 @@ class Form
                 empty($data['phone']) ||
                 empty($data['email']))
                 throw new \Exception("請輸入所有表格欄位!", 400);
-            if ($data['policy'] !== 1)
+            if ($data['policy'] !== '1')
                 throw new \Exception("請確認已閱讀隱私權政策!", 401);
             $rv = new RegValidator;
             if (!$rv->validateEmail($data['email']))
                 throw new \Exception("請輸入正確的電子信箱!", 402);
             if (!$rv->ValidatePhone($data['phone']))
                 throw new \Exception("請輸入正確的電話號碼!", 403);
-            if ($data['edm'] !== 0 && $data['edm'] !== 1)
+            if ($data['edm'] !== '0' && $data['edm'] !== '1')
                 throw new \Exception("請確認收取電子報意願!", 404);
             return ['code' => 200];
         } catch (\Exception $e) {

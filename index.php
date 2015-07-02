@@ -2,7 +2,7 @@
 include "autoload_app.php";
 
 use cronnos\printers\Printer;
-// use cronnos\SiteView;
+use helpers\Arr;
 
 // $form = new Form();
 // // $res = $form->testCRUD();
@@ -16,4 +16,24 @@ use cronnos\printers\Printer;
 // var_dump(SiteView::getViews());
 $p = new Printer;
 $p->view('view_index.php');
+
+###########################################
+##### route example #######################
+###########################################
+// $route = Arr::get($_POST, 'route', '');#
+// if (function_exists($route))           #
+//     $route();                          #
+// else {                                 #
+//     $p = new Printer();                #
+//     $p->view('view_index.php');        #
+// }                                      #
+// function handleForm()                  #
+// {                                      #
+//     $form = new Form;                  #
+//     $res = $form->insert($_POST);      #
+//     echo json_encode($res);            #
+// }                                      #
+###########################################
+##### route example #######################
+###########################################
 ?>
