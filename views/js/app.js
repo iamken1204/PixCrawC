@@ -12,4 +12,10 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wf, s);
     })();
+
+    var React = require('react'),
+  mui = require('material-ui'),
+  RaisedButton = mui.RaisedButton;
+
+
 </script>
