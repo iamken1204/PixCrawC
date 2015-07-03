@@ -1,3 +1,8 @@
+<div id="example"></div>
+<div id="content"></div>
+
+
+
 <!-- MUI example content -->
 <div class="mui-container">
   <div class="mui-panel">
