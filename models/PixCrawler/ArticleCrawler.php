@@ -41,10 +41,14 @@ class ArticleCrawler
                     break;
                 }
             }
-            return $result;
+            $res = [
+                'code' => 200,
+                'url' => $result
+            ];
+            return $res;
         } catch (\Exception $e) {
-            $eh = new EH;
-            return $eh::returnJson();
+            $eh = new EH($e);
+            return $eh::returnArray();
         }
     }
 }

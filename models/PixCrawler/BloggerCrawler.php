@@ -39,10 +39,14 @@ class BloggerCrawler
             } else {
                 $result = '';
             }
-            return $result;
+            $res = [
+                'code' => 200,
+                'url' => $result
+            ];
+            return $res;
         } catch (\Exception $e) {
             $eh = new EH($e);
-            return $eh::returnJson();
+            return $eh::returnArray();
         }
     }
 }
