@@ -1,7 +1,7 @@
 <?php
 namespace cronnos;
 
-use helpers\VarDumper;
+use cronnos\helpers\VarDumper;
 
 /**
  * A class for processing site view's works

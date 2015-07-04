@@ -1,5 +1,5 @@
 <?php
-namespace helpers;
+namespace cronnos\helpers;
 
 class ExceptionHandler
 {

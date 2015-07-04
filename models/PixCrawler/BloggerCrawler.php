@@ -1,7 +1,7 @@
 <?php
 namespace models\PixCrawler;
 
-use helpers\ExceptionHandler as EH;
+use cronnos\helpers\ExceptionHandler as EH;
 use cronnos\App;
 
 class BloggerCrawler

@@ -1,5 +1,5 @@
 <?php
-namespace helpers;
+namespace cronnos\helpers;
 
 /**
  * @link http://www.yiiframework.com/

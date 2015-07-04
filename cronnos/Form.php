@@ -1,10 +1,10 @@
 <?php
 namespace models;
 
-use helpers\VarDumper;
-use helpers\ExceptionHandler as EH;
-use helpers\RegValidator;
-use helpers\IpProcessor;
+use cronnos\helpers\VarDumper;
+use cronnos\helpers\ExceptionHandler as EH;
+use cronnos\helpers\RegValidator;
+use cronnos\helpers\IpProcessor;
 use models\App;
 
 class Form

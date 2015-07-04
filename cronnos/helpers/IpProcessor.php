@@ -1,7 +1,7 @@
 <?php
-namespace helpers;
+namespace cronnos\helpers;
 
-use helpers\Arr;
+use cronnos\helpers\Arr;
 
 class IpProcessor
 {

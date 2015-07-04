@@ -5,8 +5,8 @@ include "autoload_app.php";
 use cronnos\printers\Printer;
 use models\PixCrawler\BloggerCrawler;
 use models\PixCrawler\ArticleCrawler;
-use helpers\Arr;
-use helpers\ExceptionHandler;
+use cronnos\helpers\Arr;
+use cronnos\helpers\ExceptionHandler;
 
 // $bc = new BloggerCrawler;
 // var_dump($bc->getUrlByRank(1, 1));

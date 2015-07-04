@@ -1,5 +1,5 @@
 <?php
-namespace helpers;
+namespace cronnos\helpers;
 
 /**
 * This class helps you deal with string or text manipulation.
