@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-require(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 function autoload_app($className)
 {
     $className = ltrim($className, '\\');
@@ -13,6 +13,6 @@ function autoload_app($className)
         $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
     }
     $fileName .= $className . '.php';
-    require __DIR__ . DIRECTORY_SEPARATOR . $fileName;
+    require_once __DIR__ . DIRECTORY_SEPARATOR . $fileName;
 }
 spl_autoload_register('autoload_app');

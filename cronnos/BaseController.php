@@ -1,7 +1,8 @@
 <?php
-namespace cronnos;
+namespace cronnos\controllers;
 
 use cronnos\printers\Printer;
+use cronnos\helpers\Arr;
 
 class BaseController
 {
@@ -13,9 +14,11 @@ class BaseController
         $route = Arr::get($_GET, 'rt', $this->defaultRoute);
         if (!function_exists($route)) {
             $p = new Printer;
-            $p->view('errorPage/_404.php', [], false);
+            $p->view('errorPage/_404.php');
+        } else {
+            $this->init();
+            $route();
         }
-        $this->init();
     }
 
     public function init()
