@@ -15,7 +15,7 @@ class ArticleCrawler
     public function __construct()
     {
         $basePath = App::$config['basePath'];
-        include($basePath . '/helpers/simple_html_dom.php');
+        include($basePath . '/cronnos/helpers/simple_html_dom.php');
     }
 
     public function getUrlByRank($rank = 0)
@@ -41,6 +41,8 @@ class ArticleCrawler
                     break;
                 }
             }
+            if (empty($result))
+                $result = 'url:' . $rank . ' fetching error';
             $res = [
                 'code' => 200,
                 'url' => $result
