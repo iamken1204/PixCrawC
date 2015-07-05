@@ -22,25 +22,29 @@ class pixcraw extends Controller
     {
         try {
             $data = $_POST;
+            $category = Arr::get($_POST, 'category', '');
             if (empty($data))
                 throw new \Exception("Empty parameters!", 400);
             $rank = Arr::get($data, 'rank', false);
             $target = Arr::get($data, 'target', false);
             if (!is_numeric($rank))
                 throw new \Exception("{Parameter must be a numeric!", 401);
-            if ($target == 'blogger')
+            if ($target == 'blogger') {
                 $model = new BloggerCrawler;
-            elseif ($target == 'article')
+                $result = $model->getUrlByRank($rank, $category);
+            } elseif ($target == 'article') {
                 $model = new ArticleCrawler;
-            else
+                $result = $model->getUrlByRank($rank);
+            } else {
                 throw new \Exception("Error Processing Target", 402);
-            $result = $model->getUrlByRank($rank);
+            }
             if ($result['code'] != 200)
                 throw new \Exception($result['message'], $result['code']);
             $res = [
                 'code' => 200,
                 'url' => $result,
-                'domID' => 'rank-' . $rank
+                'domID' => $rank,
+                'category' => $category
             ];
             echo json_encode($res);
         } catch (\Exception $e) {

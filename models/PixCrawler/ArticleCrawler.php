@@ -41,6 +41,8 @@ class ArticleCrawler
                     break;
                 }
             }
+            if (empty($result))
+                $result = 'url:' . $rank . ' fetching error';
             $res = [
                 'code' => 200,
                 'url' => $result
