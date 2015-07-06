@@ -1,7 +1,7 @@
 <?php
 
 $serverEnv = 'dev';
-$baseUrl = 'http://dev.cronnos.cc';
+$baseUrl = 'http://cronnos.pixcraw.cc';
 
 if(!defined('ENV') && $serverEnv == 'dev')
     define('ENV', 'dev');
